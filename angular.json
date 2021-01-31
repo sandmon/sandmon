@@ -3,5 +3,166 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "slash-ui": {
+      "projectType": "library",
+      "root": "projects/slash-ui",
+      "sourceRoot": "projects/slash-ui/src",
+      "prefix": "ns",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/slash-ui/tsconfig.lib.json",
+            "project": "projects/slash-ui/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/slash-ui/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/slash-ui/src/test.ts",
+            "tsConfig": "projects/slash-ui/tsconfig.spec.json",
+            "karmaConfig": "projects/slash-ui/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/slash-ui/tsconfig.lib.json",
+              "projects/slash-ui/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "slash-doc": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/slash-doc",
+      "sourceRoot": "projects/slash-doc/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/slash-doc",
+            "index": "projects/slash-doc/src/index.html",
+            "main": "projects/slash-doc/src/main.ts",
+            "polyfills": "projects/slash-doc/src/polyfills.ts",
+            "tsConfig": "projects/slash-doc/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/slash-doc/src/favicon.ico",
+              "projects/slash-doc/src/assets"
+            ],
+            "styles": [
+              "projects/slash-doc/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/slash-doc/src/environments/environment.ts",
+                  "with": "projects/slash-doc/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "slash-doc:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "slash-doc:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "slash-doc:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/slash-doc/src/test.ts",
+            "polyfills": "projects/slash-doc/src/polyfills.ts",
+            "tsConfig": "projects/slash-doc/tsconfig.spec.json",
+            "karmaConfig": "projects/slash-doc/karma.conf.js",
+            "assets": [
+              "projects/slash-doc/src/favicon.ico",
+              "projects/slash-doc/src/assets"
+            ],
+            "styles": [
+              "projects/slash-doc/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/slash-doc/tsconfig.app.json",
+              "projects/slash-doc/tsconfig.spec.json",
+              "projects/slash-doc/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/slash-doc/e2e/protractor.conf.js",
+            "devServerTarget": "slash-doc:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "slash-doc:serve:production"
+            }
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "slash-ui"
 }

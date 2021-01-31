@@ -1,0 +1,6 @@
+{
+  "bundlerOptions": {
+    "entryFile": "./projects/slash-ui/src/slash-ui.scss",
+    "outFile": "./dist/slash-ui/slash-ui.scss"
+  }
+}
