@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {components} from './docs/component';
 
 @Component({
   selector: 'app-document',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DocumentComponent implements OnInit {
 
-  constructor() { }
+  components = components;
+
+  constructor() {
+
+  }
 
   ngOnInit(): void {
   }

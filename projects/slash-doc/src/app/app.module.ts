@@ -6,9 +6,9 @@ import {AppComponent} from './app.component';
 
 import {DocumentComponent} from 'projects/slash-doc/src/app/document.component';
 
-import {NSInputModule} from 'slash-ui';
-import {NSFormModule} from 'slash-ui';
-import {NSNavModule} from 'slash-ui';
+import {NSFormModule} from 'projects/slash-ui/src/form';
+import {NSInputModule} from 'projects/slash-ui/src/input';
+import {NSNavModule} from 'projects/slash-ui/src/nav';
 
 @NgModule({
   declarations: [

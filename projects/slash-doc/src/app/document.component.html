@@ -1,2 +1,32 @@
-<ns-nav></ns-nav>
+<ns-nav [logo]="logo">
+  <ng-template #logo>Slash UI</ng-template>
+  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="page" href="#">文档</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">组件</a>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+         aria-expanded="false">
+        版本
+      </a>
+      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li>
+          <hr class="dropdown-divider">
+        </li>
+        <li><a class="dropdown-item" href="#">Something else here</a></li>
+      </ul>
+    </li>
+  </ul>
+</ns-nav>
+
+<ul class="nav flex-column">
+  <li class="nav-item" *ngFor="let item of components">
+    <a class="nav-link active" aria-current="page" [href]="'#'+item.link">{{ item.title }}</a>
+  </li>
+</ul>
 <p>document works!</p>

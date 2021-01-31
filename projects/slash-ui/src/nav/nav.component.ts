@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, ElementRef, Input, OnInit, TemplateRef} from '@angular/core';
 
 @Component({
   selector: 'ns-nav',
@@ -7,7 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NSNavComponent implements OnInit {
 
-  constructor() { }
+  @Input() logo: TemplateRef<any>;
+
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
