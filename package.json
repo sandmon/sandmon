@@ -8,8 +8,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build:lib": "nodemon --ignore dist/ --ignore node_modules/ --watch projects/slash-ui -e ts,html,less,scss -x \"yarn build:style && yarn build:component\"",
-    "build:component": "ng build slash-ui",
+    "build:lib": "nodemon --ignore dist/ --ignore node_modules/ --watch projects/slash-ui -e ts,html,less,scss -x \"yarn build:component && yarn build:style && cd dist/slash-ui && yalc push\"",
+    "build:component": "ng build slash-ui --prod",
     "build:style": "cpx \"./projects/slash-ui/src/style/**/*\" \"./dist/slash-ui/style\" && scss-bundle -p scss-bundle.config.json"
   },
   "private": true,
@@ -24,6 +24,7 @@
     "@angular/router": "~11.0.5",
     "bootstrap": "^4.6.0",
     "rxjs": "~6.6.0",
+    "slash-ui": "file:.yalc/slash-ui",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
   },

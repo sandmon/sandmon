@@ -5,6 +5,7 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 
 import {NSInputModule} from 'slash-ui';
+import {NSFormModule} from 'slash-ui';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import {NSInputModule} from 'slash-ui';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NSInputModule
+    NSFormModule,
+    NSInputModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,9 @@
+{
+  "version": "v1",
+  "packages": {
+    "slash-ui": {
+      "signature": "08738eacdd08b5357822b69e16d12568",
+      "file": true
+    }
+  }
+}
