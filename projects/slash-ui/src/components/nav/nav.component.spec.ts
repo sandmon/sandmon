@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NSNavComponent } from './nav.component';
+import { NSNavComponent } from 'projects/slash-ui/src/components/nav/nav.component';
 
 describe('NavComponent', () => {
   let component: NSNavComponent;

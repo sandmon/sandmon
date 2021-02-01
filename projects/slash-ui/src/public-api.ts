@@ -1,6 +1,6 @@
 /*
  * Public API Surface of slash-ui
  */
-export * from './form/public-api';
-export * from './input/public-api';
-export * from './nav/public-api';
+export * from './components/form/public-api';
+export * from './components/input/public-api';
+export * from './components/nav/public-api';

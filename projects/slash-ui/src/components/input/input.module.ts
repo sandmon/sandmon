@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {NSInputComponent} from './input.component';
+import {NSInputComponent} from 'projects/slash-ui/src/components/input/input.component';
 
 
 @NgModule({

@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NSInputComponent } from './input.component';
+import { NSInputComponent } from 'projects/slash-ui/src/components/input/input.component';
 
 describe('InputComponent', () => {
   let component: NSInputComponent;

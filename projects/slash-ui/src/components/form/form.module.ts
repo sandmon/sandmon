@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {NSFormComponent} from './form.component';
+import {NSFormComponent} from 'projects/slash-ui/src/components/form/form.component';
 
 
 @NgModule({

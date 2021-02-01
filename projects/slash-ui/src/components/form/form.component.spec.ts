@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NSFormComponent } from './form.component';
+import { NSFormComponent } from 'projects/slash-ui/src/components/form/form.component';
 
 describe('FormComponent', () => {
   let component: NSFormComponent;
