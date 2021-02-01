@@ -1,8 +1,11 @@
 import {Component, OnInit} from '@angular/core';
-import data from '!raw-loader!projects/slash-ui/docs/form.md';
+// @ts-ignore
+import formDoc from '!raw-loader!projects/slash-ui/docs/form.md';
+// @ts-ignore
 import data2 from '!raw-loader!projects/slash-ui/src/components/input/demo/basic/basic.component';
 import * as marked from 'marked';
 import {DomSanitizer, SafeHtml} from '@angular/platform-browser';
+import {DocumentParserService} from 'projects/slash-doc/src/service/document-parser.service';
 
 @Component({
   selector: 'app-form',
@@ -11,15 +14,19 @@ import {DomSanitizer, SafeHtml} from '@angular/platform-browser';
 })
 export class FormComponent implements OnInit {
 
-  doc: SafeHtml;
 
   constructor(
     private sanitizer: DomSanitizer,
+    private dps: DocumentParserService,
   ) {
-    console.log(data);
-    console.log(data2);
-    console.log();
-    this.doc = this.sanitizer.bypassSecurityTrustHtml(marked(data));
+
+    // this.docMain = this.sanitizer.bypassSecurityTrustHtml(marked(formDoc));
+    //
+    // let tokens = marked.lexer(formDoc);
+    // console.log('tokens', tokens);
+    //
+    // const html = marked.parser(tokens);
+    // console.log('html', html);
   }
 
   ngOnInit(): void {

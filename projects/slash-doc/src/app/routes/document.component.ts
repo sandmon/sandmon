@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {components} from './docs/component';
+import {components} from 'projects/slash-doc/src/app/docs/component';
 
 @Component({
   selector: 'app-document',

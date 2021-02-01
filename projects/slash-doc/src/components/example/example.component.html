@@ -1,0 +1,15 @@
+<div class="example-demo">
+  <ng-content></ng-content>
+</div>
+<div class="example-description">
+  <div class="example-title">
+    {{ title }}
+  </div>
+  {{ description }}
+</div>
+<div class="example-actions" (click)="toggleCode()">
+  <i class="bi bi-chevron-down"></i>
+</div>
+<div *ngIf="showCode" class="example-code">
+  <pre><code>{{ code }}</code></pre>
+</div>

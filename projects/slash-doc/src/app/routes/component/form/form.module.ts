@@ -1,13 +1,14 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {FormComponent} from 'projects/slash-doc/src/app/form/form.component';
-import {NsDemoBasicInputComponent} from 'projects/slash-ui/src/components/input/demo/basic/basic.component';
+import {FormComponent} from 'projects/slash-doc/src/app/routes/component/form/form.component';
 import {RouterModule} from '@angular/router';
 import {NSInputModule} from 'projects/slash-ui/src/components/input';
+import {ExampleModule} from 'projects/slash-doc/src/components/example/example.module';
+import {DocumentModule} from 'projects/slash-doc/src/components/doc/document.module';
 
 
 @NgModule({
-  declarations: [FormComponent, NsDemoBasicInputComponent],
+  declarations: [FormComponent],
   imports: [
     CommonModule,
     NSInputModule,
@@ -16,7 +17,9 @@ import {NSInputModule} from 'projects/slash-ui/src/components/input';
         path: '',
         component: FormComponent,
       }
-    ])
+    ]),
+    ExampleModule,
+    DocumentModule
   ]
 })
 export class FormModule {

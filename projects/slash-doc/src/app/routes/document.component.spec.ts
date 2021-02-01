@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DocumentComponent } from 'projects/slash-doc/src/app/document.component';
+import { DocumentComponent } from 'projects/slash-doc/src/app/routes/document.component';
 
 describe('DocumentComponent', () => {
   let component: DocumentComponent;
