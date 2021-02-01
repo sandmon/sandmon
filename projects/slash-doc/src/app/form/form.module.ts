@@ -1,9 +1,9 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {FormComponent} from './form/form.component';
+import {FormComponent} from 'projects/slash-doc/src/app/form/form.component';
 import {NsDemoBasicInputComponent} from 'projects/slash-ui/src/components/input/demo/basic/basic.component';
 import {RouterModule} from '@angular/router';
-import {NSInputModule} from 'slash-ui';
+import {NSInputModule} from 'projects/slash-ui/src/components/input';
 
 
 @NgModule({

@@ -26,7 +26,7 @@
 
 <ul class="nav flex-column">
   <li class="nav-item" *ngFor="let item of components">
-    <a class="nav-link active" aria-current="page" [href]="'#'+item.link">{{ item.title }}</a>
+    <a class="nav-link active" aria-current="page" [href]="item.link">{{ item.title }}</a>
   </li>
 </ul>
 <p>document works!</p>

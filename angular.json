@@ -55,8 +55,11 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-builders/custom-webpack:browser",
           "options": {
+            "customWebpackConfig": {
+              "path": "./webpack.partial.js"
+            },
             "outputPath": "dist/slash-doc",
             "index": "projects/slash-doc/src/index.html",
             "main": "projects/slash-doc/src/main.ts",
