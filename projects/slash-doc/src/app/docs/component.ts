@@ -18,5 +18,9 @@ export const components = [
   {
     'title': 'Input',
     'link': 'components/input'
+  },
+  {
+    'title': 'Modal',
+    'link': 'components/modal'
   }
 ];

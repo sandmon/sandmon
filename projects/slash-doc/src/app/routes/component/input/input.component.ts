@@ -1,10 +1,10 @@
 import {Component, OnInit} from '@angular/core';
 
 import doc from '!raw-loader!projects/slash-ui/src/components/input/readme.md';
-import basicDoc from '!raw-loader!projects/slash-ui/src/components/input/demo/basic/basic.md';
-import basicCode from '!raw-loader!projects/slash-ui/src/components/input/demo/basic/basic.component';
-import {NsDemoBasicInputComponent} from 'projects/slash-ui/src/components/input/demo/basic/basic.component';
-import {Examples} from 'projects/slash-doc/src/components/doc/document.component';
+import basicDoc from '!raw-loader!projects/slash-ui/src/components/input/demo/basic.md';
+import basicCode from '!raw-loader!projects/slash-ui/src/components/input/demo/basic.component';
+import {NsDemoInputBasicComponent} from 'projects/slash-ui/src/components/input/demo/basic.component';
+import {Examples} from 'projects/slash-doc/src/components/document/document.component';
 
 
 @Component({
@@ -21,22 +21,22 @@ export class InputComponent implements OnInit {
       {
         doc: basicDoc,
         code: basicCode,
-        component: NsDemoBasicInputComponent,
+        component: NsDemoInputBasicComponent,
       },
       {
         doc: basicDoc,
         code: basicCode,
-        component: NsDemoBasicInputComponent,
+        component: NsDemoInputBasicComponent,
       },
       {
         doc: basicDoc,
         code: basicCode,
-        component: NsDemoBasicInputComponent,
+        component: NsDemoInputBasicComponent,
       },
       {
         doc: basicDoc,
         code: basicCode,
-        component: NsDemoBasicInputComponent,
+        component: NsDemoInputBasicComponent,
       },
     ]
   };

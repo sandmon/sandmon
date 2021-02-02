@@ -3,7 +3,7 @@ import {CommonModule} from '@angular/common';
 import {ContainerComponent} from './container.component';
 import {RouterModule} from '@angular/router';
 import {NSDemoContainerBasicComponent} from 'projects/slash-ui/src/components/container/demo/basic.component';
-import {DocumentModule} from 'projects/slash-doc/src/components/doc/document.module';
+import {DocumentModule} from 'projects/slash-doc/src/components/document/document.module';
 
 
 @NgModule({

@@ -1,5 +1,5 @@
 import {Component, Input, OnInit, TemplateRef} from '@angular/core';
-import {MEDIA_SIZE} from 'projects/slash-ui/src/types';
+import {NS_SIZE} from 'projects/slash-ui/src/types';
 import {NgModel} from '@angular/forms';
 
 @Component({
@@ -9,7 +9,7 @@ import {NgModel} from '@angular/forms';
 })
 export class FormControlComponent implements OnInit {
 
-  @Input() nsSize: MEDIA_SIZE | null = null;
+  @Input() nsSize: NS_SIZE | null = null;
 
   constructor() {
 

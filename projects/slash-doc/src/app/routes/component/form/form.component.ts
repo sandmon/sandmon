@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 // @ts-ignore
 import formDoc from '!raw-loader!projects/slash-ui/docs/form.md';
 // @ts-ignore
-import data2 from '!raw-loader!projects/slash-ui/src/components/input/demo/basic/basic.component';
+import data2 from '!raw-loader!projects/slash-ui/src/components/input/demo/basic.component';
 import * as marked from 'marked';
 import {DomSanitizer, SafeHtml} from '@angular/platform-browser';
 import {DocumentParserService} from 'projects/slash-doc/src/service/document-parser.service';

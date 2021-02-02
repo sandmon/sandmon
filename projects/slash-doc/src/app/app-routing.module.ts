@@ -27,6 +27,10 @@ const routes: Routes = [
       {
         path: 'input',
         loadChildren: () => import('./routes/component/input/input.module').then(m => m.InputModule)
+      },
+      {
+        path: 'modal',
+        loadChildren: () => import('./routes/component/modal/modal.module').then(m => m.ModalModule)
       }
     ]
   },

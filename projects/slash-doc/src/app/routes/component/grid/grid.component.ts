@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 
-import {Examples} from 'projects/slash-doc/src/components/doc/document.component';
+import {Examples} from 'projects/slash-doc/src/components/document/document.component';
 import doc from '!raw-loader!projects/slash-ui/src/components/grid/readme.md';
 import basicDoc from '!raw-loader!projects/slash-ui/src/components/grid/demo/basic.md';
 import basicCode from '!raw-loader!projects/slash-ui/src/components/grid/demo/basic.component';

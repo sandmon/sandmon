@@ -1,14 +1,12 @@
 import {Component, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'ns-demo-basic',
-  template: `
-    <ns-input></ns-input>
-  `,
+  selector: 'ns-basic',
+  template: ``,
   styles: [`
   `]
 })
-export class NsDemoBasicInputComponent implements OnInit {
+export class BasicComponent implements OnInit {
 
   constructor() {
   }

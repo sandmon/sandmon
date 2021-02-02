@@ -1,5 +1,5 @@
 import {AfterViewInit, Directive, ElementRef, Input} from '@angular/core';
-import {MEDIA_SIZE} from 'projects/slash-ui/src/types';
+import {NS_SIZE} from 'projects/slash-ui/src/types';
 
 
 @Directive({
@@ -7,7 +7,7 @@ import {MEDIA_SIZE} from 'projects/slash-ui/src/types';
 })
 export class ContainerDirective implements AfterViewInit {
 
-  @Input() nsSize: MEDIA_SIZE | null = null;
+  @Input() nsSize: NS_SIZE | null = null;
 
   constructor(private el: ElementRef) {
   }

@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import doc from '!raw-loader!projects/slash-ui/src/components/container/readme.md';
 import basicDoc from '!raw-loader!projects/slash-ui/src/components/container/demo/basic.md';
 import basicCode from '!raw-loader!projects/slash-ui/src/components/grid/demo/basic.component';
-import {Examples} from 'projects/slash-doc/src/components/doc/document.component';
+import {Examples} from 'projects/slash-doc/src/components/document/document.component';
 import {NSDemoContainerBasicComponent} from 'projects/slash-ui/src/components/container/demo/basic.component';
 
 @Component({
