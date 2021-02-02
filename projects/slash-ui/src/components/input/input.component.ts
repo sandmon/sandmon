@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {INPUT_TYPE, MEDIA_SIZE} from 'projects/slash-ui/src/types';
+
 
 @Component({
   selector: 'ns-input',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NSInputComponent implements OnInit {
 
-  constructor() { }
+  @Input() nsSize: MEDIA_SIZE = 'default';
+  @Input() nsType: INPUT_TYPE = 'text';
+  @Input() nsPlaceholder: string | null = null;
+  @Input() nsDisabled: boolean = false;
+  @Input() nsReadonly: boolean = false;
+  @Input() nsDataList: string[] = [];
 
-  ngOnInit(): void {
+  constructor() {
+  }
+
+  ngOnInit() {
   }
 
 }
