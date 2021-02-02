@@ -1,9 +1,9 @@
-import {ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'ns-basic',
   template: `
-    <ns-container>
+    <div ns-container>
       <div ns-row>
         <div class="c1" ns-col [nsSpan]="6">
           1
@@ -12,25 +12,17 @@ import {ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit} from '@an
           2
         </div>
       </div>
-    </ns-container>
+    </div>
   `,
   styles: [`
     .c1 {
       background: red;
     }
+
     .c2 {
       background: gray;
     }
   `]
 })
-export class NSDemoGridBasicComponent implements OnInit {
-
-  constructor(
-    private cd: ChangeDetectorRef,
-  ) {
-  }
-
-  ngOnInit() {
-  }
-
+export class NSDemoGridBasicComponent {
 }

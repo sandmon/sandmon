@@ -5,13 +5,15 @@ import {DocumentModule} from 'projects/slash-doc/src/components/doc/document.mod
 import {RouterModule} from '@angular/router';
 import {NSGridModule} from 'projects/slash-ui/src/components/grid/grid.module';
 import {NSDemoGridBasicComponent} from 'projects/slash-ui/src/components/grid/demo/basic.component';
-import {ContainerModule} from 'projects/slash-ui/src/components/container/container.module';
+import {NSContainerModule} from 'projects/slash-ui/src/components/container/container.module';
+import {NSDemoGridOrderComponent} from 'projects/slash-ui/src/components/grid/demo/order.component';
 
 
 @NgModule({
   declarations: [
     GridComponent,
     NSDemoGridBasicComponent,
+    NSDemoGridOrderComponent,
   ],
   imports: [
     CommonModule,
@@ -23,7 +25,7 @@ import {ContainerModule} from 'projects/slash-ui/src/components/container/contai
     ]),
     NSGridModule,
     DocumentModule,
-    ContainerModule
+    NSContainerModule
   ]
 })
 export class GridModule {

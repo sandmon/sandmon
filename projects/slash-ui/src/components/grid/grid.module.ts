@@ -3,7 +3,6 @@ import {CommonModule} from '@angular/common';
 import {NSColDirective} from './col.directive';
 import {NSRowDirective} from './row.directive';
 
-
 const COMPONENTS = [
   NSColDirective,
   NSRowDirective,
