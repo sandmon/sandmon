@@ -38,4 +38,4 @@ function replace(filePath) {
   console.log(content.toString())
 }
 
-walk('./projects/slash-ui/src/bootstrap/scss')
+walk('./projects/lib/src/bootstrap/scss')

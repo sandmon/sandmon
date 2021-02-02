@@ -3,38 +3,38 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "slash-ui": {
+    "sandmon": {
       "projectType": "library",
-      "root": "projects/slash-ui",
-      "sourceRoot": "projects/slash-ui/src",
+      "root": "projects/lib",
+      "sourceRoot": "projects/lib/src",
       "prefix": "ns",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "tsConfig": "projects/slash-ui/tsconfig.lib.json",
-            "project": "projects/slash-ui/ng-package.json"
+            "tsConfig": "projects/lib/tsconfig.lib.json",
+            "project": "projects/lib/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/slash-ui/tsconfig.lib.prod.json"
+              "tsConfig": "projects/lib/tsconfig.lib.prod.json"
             }
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/slash-ui/src/test.ts",
-            "tsConfig": "projects/slash-ui/tsconfig.spec.json",
-            "karmaConfig": "projects/slash-ui/karma.conf.js"
+            "main": "projects/lib/src/test.ts",
+            "tsConfig": "projects/lib/tsconfig.spec.json",
+            "karmaConfig": "projects/lib/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/slash-ui/tsconfig.lib.json",
-              "projects/slash-ui/tsconfig.spec.json"
+              "projects/lib/tsconfig.lib.json",
+              "projects/lib/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -43,15 +43,15 @@
         }
       }
     },
-    "slash-doc": {
+    "site": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss"
         }
       },
-      "root": "projects/slash-doc",
-      "sourceRoot": "projects/slash-doc/src",
+      "root": "projects/site",
+      "sourceRoot": "projects/site/src",
       "prefix": "app",
       "architect": {
         "build": {
@@ -60,18 +60,18 @@
             "customWebpackConfig": {
               "path": "./webpack.partial.js"
             },
-            "outputPath": "dist/slash-doc",
-            "index": "projects/slash-doc/src/index.html",
-            "main": "projects/slash-doc/src/main.ts",
-            "polyfills": "projects/slash-doc/src/polyfills.ts",
-            "tsConfig": "projects/slash-doc/tsconfig.app.json",
+            "outputPath": "dist/site",
+            "index": "projects/site/src/index.html",
+            "main": "projects/site/src/main.ts",
+            "polyfills": "projects/site/src/polyfills.ts",
+            "tsConfig": "projects/site/tsconfig.app.json",
             "aot": true,
             "assets": [
-              "projects/slash-doc/src/favicon.ico",
-              "projects/slash-doc/src/assets"
+              "projects/site/src/favicon.ico",
+              "projects/site/src/assets"
             ],
             "styles": [
-              "projects/slash-doc/src/styles.scss"
+              "projects/site/src/styles.scss"
             ],
             "scripts": []
           },
@@ -79,8 +79,8 @@
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "projects/slash-doc/src/environments/environment.ts",
-                  "with": "projects/slash-doc/src/environments/environment.prod.ts"
+                  "replace": "projects/site/src/environments/environment.ts",
+                  "with": "projects/site/src/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -108,33 +108,33 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "slash-doc:build"
+            "browserTarget": "site:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "slash-doc:build:production"
+              "browserTarget": "site:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "slash-doc:build"
+            "browserTarget": "site:build"
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/slash-doc/src/test.ts",
-            "polyfills": "projects/slash-doc/src/polyfills.ts",
-            "tsConfig": "projects/slash-doc/tsconfig.spec.json",
-            "karmaConfig": "projects/slash-doc/karma.conf.js",
+            "main": "projects/site/src/test.ts",
+            "polyfills": "projects/site/src/polyfills.ts",
+            "tsConfig": "projects/site/tsconfig.spec.json",
+            "karmaConfig": "projects/site/karma.conf.js",
             "assets": [
-              "projects/slash-doc/src/favicon.ico",
-              "projects/slash-doc/src/assets"
+              "projects/site/src/favicon.ico",
+              "projects/site/src/assets"
             ],
             "styles": [
-              "projects/slash-doc/src/styles.scss"
+              "projects/site/src/styles.scss"
             ],
             "scripts": []
           }
@@ -143,9 +143,9 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/slash-doc/tsconfig.app.json",
-              "projects/slash-doc/tsconfig.spec.json",
-              "projects/slash-doc/e2e/tsconfig.json"
+              "projects/site/tsconfig.app.json",
+              "projects/site/tsconfig.spec.json",
+              "projects/site/e2e/tsconfig.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -155,17 +155,17 @@
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
-            "protractorConfig": "projects/slash-doc/e2e/protractor.conf.js",
-            "devServerTarget": "slash-doc:serve"
+            "protractorConfig": "projects/site/e2e/protractor.conf.js",
+            "devServerTarget": "site:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "slash-doc:serve:production"
+              "devServerTarget": "site:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "slash-ui"
+  "defaultProject": "sandmon"
 }

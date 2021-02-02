@@ -3,7 +3,7 @@ const sass = require('gulp-sass');
 const concat = require('gulp-concat');
 const run = require('gulp-run');
 
-const projectName = 'slash-ui';
+const projectName = 'sandmon';
 const distDir = './dist/' + projectName;
 
 gulp.task('build:angular-package', function () {

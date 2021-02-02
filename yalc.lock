@@ -1,7 +1,7 @@
 {
   "version": "v1",
   "packages": {
-    "slash-ui": {
+    "sandmon": {
       "signature": "ee2913c7bc033e638d21cdc00c571f7c",
       "file": true
     }

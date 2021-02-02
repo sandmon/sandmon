@@ -1,5 +1,5 @@
 {
-  "name": "slash",
+  "name": "samon",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -8,9 +8,9 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build:lib": "nodemon --ignore dist/ --ignore node_modules/ --watch projects/slash-ui -e ts,html,less,scss -x \"yarn build:component && yarn build:style && cd dist/slash-ui && yalc push\"",
-    "build:component": "ng build slash-ui --prod",
-    "build:style": "cpx \"./projects/slash-ui/src/style/**/*\" \"./dist/slash-ui/style\" && scss-bundle -p scss-bundle.config.json"
+    "build:lib": "nodemon --ignore dist/ --ignore node_modules/ --watch projects/lib -e ts,html,less,scss -x \"yarn build:component && yarn build:style && cd dist/sandmon && yalc push\"",
+    "build:component": "ng build sandmon --prod",
+    "build:style": "cpx \"./projects/lib/src/style/**/*\" \"./dist/sandmon/style\" && scss-bundle -p scss-bundle.config.json"
   },
   "private": true,
   "dependencies": {
