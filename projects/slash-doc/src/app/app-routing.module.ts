@@ -13,6 +13,14 @@ const routes: Routes = [
     component: ComponentComponent,
     children: [
       {
+        path: 'container',
+        loadChildren: () => import('./routes/component/container/container.module').then(m => m.ContainerModule)
+      },
+      {
+        path: 'grid',
+        loadChildren: () => import('./routes/component/grid/grid.module').then(m => m.GridModule)
+      },
+      {
         path: 'form',
         loadChildren: () => import('./routes/component/form/form.module').then(m => m.FormModule)
       },

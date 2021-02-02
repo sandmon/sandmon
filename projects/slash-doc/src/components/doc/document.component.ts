@@ -1,5 +1,5 @@
 import {
-  AfterViewInit,
+  AfterViewInit, ChangeDetectorRef,
   Component,
   ComponentFactoryResolver,
   Directive,
@@ -53,6 +53,7 @@ export class DocumentComponent implements OnInit, AfterViewInit {
   constructor(
     private domSanitizer: DomSanitizer,
     private componentFactoryResolver: ComponentFactoryResolver,
+    private cd: ChangeDetectorRef,
   ) {
   }
 
@@ -88,7 +89,7 @@ export class DocumentComponent implements OnInit, AfterViewInit {
           if (_token.type == 'heading' && _token.depth == 1) {
             this.toc.push(_token.text);
             example.title = _token.text;
-            example.description = this.domSanitizer.bypassSecurityTrustHtml(marked.parser(_tokens.slice(i)));
+            example.description = this.domSanitizer.bypassSecurityTrustHtml(marked.parser(_tokens.slice(i - 1)));
             break;
           }
         }
@@ -108,6 +109,7 @@ export class DocumentComponent implements OnInit, AfterViewInit {
         let example = this.examples.children[i];
         const componentFactory = this.componentFactoryResolver.resolveComponentFactory(example.component);
         refs[i].viewContainerRef.createComponent(componentFactory);
+        this.cd.detectChanges();
       }
     }
   }
