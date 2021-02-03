@@ -1,8 +1,8 @@
 # Sandmon
 
-一款为个人开发者、创业团队打造的桌面端组件库，基于 angular 和 bootstrap。
+Web component library for personal developer and entrepreneur team, base on angular + bootstrap.
 
-## 安装
+## Install
 
 ```bash
 $ npm install sandmon
