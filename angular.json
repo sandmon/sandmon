@@ -73,7 +73,8 @@
             "styles": [
               "projects/site/src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+            ]
           },
           "configurations": {
             "production": {
