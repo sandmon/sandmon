@@ -26,7 +26,7 @@ Prism.languages.insertBefore('angular', 'string', {
       }
     }
   }
-});
+}, null);
 
 @Component({
   selector: 'example',
@@ -48,7 +48,7 @@ export class ExampleComponent implements OnInit {
 
   ngOnInit() {
     this.highlightCode = this.domSanitizer.bypassSecurityTrustHtml(
-      Prism.highlight(this.code, Prism.languages.angular)
+      Prism.highlight(this.code, Prism.languages.angular, 'angular')
     );
   }
 
