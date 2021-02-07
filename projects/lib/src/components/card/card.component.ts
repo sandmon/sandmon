@@ -1,19 +1,25 @@
-import {Component, Input, OnInit, TemplateRef} from '@angular/core';
+import {Component, HostBinding, Input, OnInit, TemplateRef} from '@angular/core';
 
 @Component({
   selector: 'ns-card',
   templateUrl: './card.component.html',
-  styleUrls: ['./card.component.css']
 })
 export class NSCardComponent implements OnInit {
 
-  @Input() title: TemplateRef<any> | string | null = null;
-  @Input() body: TemplateRef<any> | string | null = null;
+  @HostBinding() class = 'card';
+  @Input() nsImg: TemplateRef<any> | string | null = null;
+  @Input() nsTitle: TemplateRef<any> | string | null = null;
+  @Input() nsBody: TemplateRef<any> | string | null = null;
+
+  isTitleRef: boolean = false;
+  isBodyRef: boolean = false;
 
   constructor() {
   }
 
   ngOnInit() {
+    this.isTitleRef = this.nsTitle instanceof TemplateRef;
+    this.isBodyRef = this.nsBody instanceof TemplateRef;
   }
 
 }

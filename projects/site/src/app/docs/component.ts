@@ -22,5 +22,13 @@ export const components = [
   {
     'title': 'Modal 弹窗',
     'link': 'components/modal'
+  },
+  {
+    'title': 'Alert 提示',
+    'link': 'components/alert'
+  },
+  {
+    'title': 'Card 卡片',
+    'link': 'components/card'
   }
 ];

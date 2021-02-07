@@ -31,6 +31,14 @@ const routes: Routes = [
       {
         path: 'modal',
         loadChildren: () => import('./routes/component/modal/modal.module').then(m => m.ModalModule)
+      },
+      {
+        path: 'alert',
+        loadChildren: () => import('./routes/component/alert/alert.module').then(m => m.AlertModule)
+      },
+      {
+        path: 'card',
+        loadChildren: () => import('./routes/component/card/card.module').then(m => m.CardModule)
       }
     ]
   },

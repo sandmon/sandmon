@@ -1,12 +1,18 @@
 import {Component, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'ns-basic',
-  template: ``,
+  selector: 'ns-demo-card-basic',
+  template: `
+    <ns-card nsTitle="测试标题" [nsBody]="body">
+      <ng-template #body>
+        <ns-alert>这是一段提示</ns-alert>
+      </ng-template>
+    </ns-card>
+  `,
   styles: [`
   `]
 })
-export class BasicComponent implements OnInit {
+export class NSDemoCardBasicComponent implements OnInit {
 
   constructor() {
   }
