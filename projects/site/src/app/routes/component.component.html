@@ -1,14 +1,18 @@
 <div class="container-fluid">
   <div class="row flex-xl-nowrap">
     <div class="col-1" style="border-right: 1px solid #d8d8d8;height: calc(100vh - 3rem);width: 270px;">
-      <ul class="nav flex-column">
-        <li class="nav-item" *ngFor="let item of components">
-          <a class="nav-link active" aria-current="page" [href]="item.link">{{ item.title }}</a>
-        </li>
-      </ul>
+      <div class="container-fluid">
+        <ul class="nav flex-column">
+          <li class="nav-item" *ngFor="let item of components">
+            <a class="nav-link active" aria-current="page" [href]="item.link">{{ item.title }}</a>
+          </li>
+        </ul>
+      </div>
     </div>
     <div class="col">
-      <router-outlet></router-outlet>
+      <div class="container-fluid">
+        <router-outlet></router-outlet>
+      </div>
     </div>
   </div>
 </div>

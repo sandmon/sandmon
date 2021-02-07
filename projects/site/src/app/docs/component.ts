@@ -1,26 +1,26 @@
 export const components = [
   {
-    'title': '布局容器',
+    'title': 'Container 容器',
     'link': 'components/container'
   },
   {
-    'title': 'Grid',
+    'title': 'Grid 栅栏',
     'link': 'components/grid'
   },
   {
-    'title': 'Layout',
+    'title': 'Layout 布局',
     'link': 'components/layout'
   },
   {
-    'title': '表单',
+    'title': 'Form 表单',
     'link': 'components/form'
   },
   {
-    'title': 'Input',
+    'title': 'Input 输入框',
     'link': 'components/input'
   },
   {
-    'title': 'Modal',
+    'title': 'Modal 弹窗',
     'link': 'components/modal'
   }
 ];
