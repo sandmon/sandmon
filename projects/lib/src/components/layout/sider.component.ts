@@ -1,4 +1,4 @@
-import {Component, ElementRef, Input, OnInit} from "@angular/core";
+import {ChangeDetectorRef, Component, ElementRef, EventEmitter, Input, OnInit, Output, TemplateRef} from "@angular/core";
 import { toCssPixel } from '../../utils/convert';
 
 
@@ -9,9 +9,14 @@ import { toCssPixel } from '../../utils/convert';
       <ng-content></ng-content>
     </div>
     <div
-      *ngIf="nsCollapsible"
+      *ngIf="nsCollapsible && nsTrigger !== null"
       ns-sider-trigger
+      [nsCollapsed]="nsCollapsed"
+      [nsCollapsedWidth]="nsCollapsedWidth"
+      [nsReverseArrow]="nsReverseArrow"
+      [nsTrigger]="nsTrigger"
       [siderWidth]="widthSetting"
+      (click)="setCollapsed(!nsCollapsed)"
     >
     </div>
   `,
@@ -19,16 +24,21 @@ import { toCssPixel } from '../../utils/convert';
     '[class.layout-sider-light]': `nsTheme === 'light'`,
     '[class.layout-sider-dark]': `nsTheme === 'dark'`,
     '[style.width]': 'widthSetting',
+    '[style.maxWidth]': 'widthSetting',
+    '[style.minWidth]': 'widthSetting',
     '[style.flex]': 'flexSetting',
   }
 })
 export class NSSiderComponent implements OnInit {
 
+  @Output() readonly nsCollapsedChange = new EventEmitter();
   @Input() nsWidth: string | number = 200;
-  @Input() nsCollapsible: boolean = false;
   @Input() nsCollapsedWidth: string | number = 80;
+  @Input() nsTheme: 'light' | 'dark' = 'dark';
+  @Input() nsTrigger: TemplateRef<void> | undefined | null = undefined;
+  @Input() nsCollapsible: boolean = false;
   @Input() nsCollapsed: boolean = false;
-  @Input() nsTheme: 'light' | 'dark' = 'dark'
+  @Input() nsReverseArrow: boolean = false;
 
   widthSetting: string | null = null;
   flexSetting: string | null = null;
@@ -38,11 +48,22 @@ export class NSSiderComponent implements OnInit {
     this.widthSetting = this.nsCollapsed ? toCssPixel(this.nsCollapsedWidth) : toCssPixel(this.nsWidth);
     this.flexSetting = `0 0 ${this.widthSetting}`;
   }
-  constructor(public elementRef: ElementRef) {
+  constructor(
+    private cdr: ChangeDetectorRef,
+    private elementRef: ElementRef
+    ) {
     this.elementRef.nativeElement.classList.add('layout-sider')
   }
   ngOnInit():void {
     this.updateStyleMap()
   }
 
+  setCollapsed(collapsed: boolean): void {
+    if (collapsed !== this.nsCollapsed) {
+      this.nsCollapsed = collapsed;
+      this.nsCollapsedChange.emit(collapsed)
+      this.updateStyleMap()
+      this.cdr.markForCheck()
+    }
+  }
 }

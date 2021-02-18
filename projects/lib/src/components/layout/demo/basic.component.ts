@@ -12,7 +12,7 @@ import {Component} from '@angular/core';
           这是sider
         </ns-sider>
         <ns-content>
-          这是内容
+          <div style="min-height: 200px;margin:16px;background:#fff">这是内容</div>
         </ns-content>
       </ns-layout>
     </ns-layout>

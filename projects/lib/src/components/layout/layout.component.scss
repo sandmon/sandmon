@@ -57,7 +57,7 @@ $layout-prefix-cls: layout;
       padding-top: 0.1px;
     }
     &-trigger {
-      position: fixed;
+      position: absolute;
       bottom: 0;
       z-index: 1;
       height: 40px;
