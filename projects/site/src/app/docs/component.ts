@@ -30,5 +30,9 @@ export const components = [
   {
     'title': 'Card 卡片',
     'link': 'components/card'
+  },
+  {
+    'title': 'Menu 菜单',
+    'link': 'components/menu'
   }
 ];

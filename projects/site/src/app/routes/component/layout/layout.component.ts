@@ -15,7 +15,7 @@ export class LayoutComponent implements OnInit {
 
   doc = doc;
   examples: Examples = {
-    col: 2,
+    col: 1,
     children: [
       {
         doc: basicDoc,

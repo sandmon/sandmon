@@ -1,4 +1,5 @@
 import {ChangeDetectionStrategy, Component, Input, OnInit, TemplateRef, ViewEncapsulation} from "@angular/core";
+import { InputBoolean } from "../../utils/convert";
 
 
 @Component({
@@ -23,11 +24,11 @@ import {ChangeDetectionStrategy, Component, Input, OnInit, TemplateRef, ViewEnca
 })
 export class NSSiderTriggerComponent implements OnInit {
 
-  @Input() nsCollapsed: boolean = false;
+  @Input() @InputBoolean() nsCollapsed: boolean = false;
   @Input() nzTrigger: TemplateRef<void> | undefined | null = undefined;
   @Input() nsCollapsedWidth: number | null = null;
   @Input() siderWidth: string | null = null;
-  @Input() nsReverseArrow:boolean = false;
+  @Input() @InputBoolean() nsReverseArrow:boolean = false;
   isZeroTrigger = false;
   isNormalTrigger = false;
 

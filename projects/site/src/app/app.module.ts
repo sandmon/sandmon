@@ -9,6 +9,8 @@ import {DocumentComponent} from 'projects/site/src/app/routes/document.component
 import {NSFormModule} from 'projects/lib/src/components/form';
 import {NSInputModule} from 'projects/lib/src/components/input';
 import {NSNavModule} from 'projects/lib/src/components/nav';
+import {NSLayoutModule} from 'projects/lib/src/components/layout';
+import {NSMenuModule} from 'projects/lib/src/components/menu';
 import { ComponentComponent } from 'projects/site/src/app/routes/component.component';
 
 @NgModule({
@@ -23,6 +25,8 @@ import { ComponentComponent } from 'projects/site/src/app/routes/component.compo
     NSFormModule,
     NSInputModule,
     NSNavModule,
+    NSLayoutModule,
+    NSMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

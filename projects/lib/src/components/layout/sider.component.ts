@@ -1,5 +1,5 @@
 import {ChangeDetectorRef, Component, ElementRef, EventEmitter, Input, OnInit, Output, TemplateRef} from "@angular/core";
-import { toCssPixel } from '../../utils/convert';
+import { InputBoolean, toCssPixel } from '../../utils/convert';
 
 
 @Component({
@@ -36,9 +36,9 @@ export class NSSiderComponent implements OnInit {
   @Input() nsCollapsedWidth: string | number = 80;
   @Input() nsTheme: 'light' | 'dark' = 'dark';
   @Input() nsTrigger: TemplateRef<void> | undefined | null = undefined;
-  @Input() nsCollapsible: boolean = false;
-  @Input() nsCollapsed: boolean = false;
-  @Input() nsReverseArrow: boolean = false;
+  @Input() @InputBoolean() nsCollapsible: boolean = false;
+  @Input() @InputBoolean() nsCollapsed: boolean = false;
+  @Input() @InputBoolean() nsReverseArrow: boolean = false;
 
   widthSetting: string | null = null;
   flexSetting: string | null = null;

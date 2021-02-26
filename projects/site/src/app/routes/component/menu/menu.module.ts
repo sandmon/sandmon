@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LayoutComponent } from './layout.component';
+import { LayoutComponent } from './menu.component';
 import {RouterModule} from '@angular/router';
 import {DocumentModule} from 'projects/site/src/app/components/document/document.module';
-import {NSDemoLayoutBasicComponent} from 'projects/lib/src/components/layout/demo/basic.component';
-import {NSLayoutModule} from 'projects/lib/src/components/layout';
+import {NSDemoMenuBasicComponent} from 'projects/lib/src/components/menu/demo/basic.component';
+import {NSMenuModule} from 'projects/lib/src/components/menu';
 
 
 
 @NgModule({
-  declarations: [LayoutComponent, NSDemoLayoutBasicComponent],
+  declarations: [LayoutComponent, NSDemoMenuBasicComponent],
   imports: [
     CommonModule,
     RouterModule.forChild([
@@ -18,8 +18,8 @@ import {NSLayoutModule} from 'projects/lib/src/components/layout';
         component: LayoutComponent
       }
     ]),
-    NSLayoutModule,
+    NSMenuModule,
     DocumentModule,
   ]
 })
-export class LayoutModule { }
+export class MenuModule { }

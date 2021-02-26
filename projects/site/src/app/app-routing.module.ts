@@ -43,6 +43,10 @@ const routes: Routes = [
       {
         path: 'layout',
         loadChildren: () => import('./routes/component/layout/layout.module').then(m => m.LayoutModule)
+      },
+      {
+        path: 'menu',
+        loadChildren: () => import('./routes/component/menu/menu.module').then(m => m.MenuModule)
       }
     ]
   },
